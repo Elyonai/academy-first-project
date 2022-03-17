@@ -15,6 +15,7 @@ export const Form = styled.form`
     padding: 20px;
     border-radius: var(--radius);
     transition: var(--transition);
+    text-align: left;
 
     h2 {
         font-size: 30px;
