@@ -15,9 +15,9 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import MailIcon from '@mui/icons-material/Mail';
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import HomeIcon from '@mui/icons-material/Home';
-import DeleteIcon from '@mui/icons-material/Delete';
+import LogoutIcon from '@mui/icons-material/Logout';
 import { red } from '@mui/material/colors';
 
 
@@ -153,7 +153,7 @@ export default function MiniDrawer() {
           )}
           {(
             <ListItemButton
-              key="Mail"
+              key="Añadir"
               sx={{
                 minHeight: 48,
                 justifyContent: open ? 'initial' : 'center',
@@ -167,14 +167,14 @@ export default function MiniDrawer() {
                   justifyContent: 'center',
                 }}
               >
-              <MailIcon color="primary"/>
+              <AddCircleOutlineIcon color="primary"/>
               </ListItemIcon>
-              <ListItemText primary="Mail" sx={{ opacity: open ? 1 : 0 }} />
+              <ListItemText primary="Añadir" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton> 
           )}
           {(
             <ListItemButton
-              key="Basurero"
+              key="Salir"
               sx={{
                 minHeight: 48,
                 justifyContent: open ? 'initial' : 'center',
@@ -188,9 +188,9 @@ export default function MiniDrawer() {
                   justifyContent: 'center',
                 }}
               >
-              <DeleteIcon color="primary" sx={{ color: red[500] }}/>
+              <LogoutIcon sx={{ color: red[500] }}/>
               </ListItemIcon>
-              <ListItemText primary="Basurero" sx={{ opacity: open ? 1 : 0 }} />
+              <ListItemText primary="Salir" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton> 
           )}
         </List>
