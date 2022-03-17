@@ -1,0 +1,7 @@
+{
+  "users": [
+    { "id": 1, "nombre": "mike tyson", "email": "mike@gmail.com", "password": "testing"},
+    { "id": 2, "nombre": "joe contreras", "email": "joe@gmail.com", "password": "prueba"},
+    { "id": 3, "nombre": "david lopez", "email": "davic@gmail.com", "password": "hola1"}
+  ]
+}

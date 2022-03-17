@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+/.idea/.gitignore
+/.idea/academy-first-project.iml
+/db.json
+/.idea/modules.xml
+/.idea/prettier.xml
+/.idea/vcs.xml
