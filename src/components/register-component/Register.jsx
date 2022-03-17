@@ -26,19 +26,22 @@ export default function Register() {
             id='name'
             label='Name'
             variant='standard'
-          />
+          />{' '}
+          <br />
           <TextField
             className='input-field'
             id='standard-basic'
             label='Email'
             variant='standard'
           />
+          <br />
           <TextField
             className='input-field'
             id='standard-basic'
             label='Password'
             variant='standard'
           />
+          <br />
           <TextField
             className='input-field'
             id='standard-basic'
