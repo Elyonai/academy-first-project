@@ -28,3 +28,4 @@ yarn-error.log*
 /.idea/prettier.xml
 /.idea/vcs.xml
 /.idea/
+/package-lock.json

@@ -5,8 +5,10 @@ import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import "./Register.css";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function Register() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -35,6 +37,8 @@ export default function Register() {
           password,
         });
         console.log(res);
+        localStorage.setItem("user", JSON.stringify(res.data));
+        navigate("/");
       } catch (e) {
         console.log(e);
       }
