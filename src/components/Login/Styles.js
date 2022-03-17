@@ -8,6 +8,7 @@ export const Container = styled.div`
     align-items: center;
 `;
 
+// Form
 export const Form = styled.form`
     width: 100%;
     max-width: 400px;
@@ -82,23 +83,6 @@ export const InputControl = styled.input`
     ${props => props.hidde && css`display: none;`}
     ${props => props.icon && css`padding: 10px 20px 10px 40px;`}
     ${props => props.disabled && css`background: rgb(243, 243, 243);`}
-`;
-
-// Textarea
-export const ContainerTextArea = styled.div`
-    width: 100%;
-    width: 150px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-`;
-
-export const TextAreaControl = styled.textarea`
-    width: 100%;
-    height: 100%;
-    border: var(--border);
-    border-radius: var(--radius);
-    resize: none;
 `;
 
 // Legend
