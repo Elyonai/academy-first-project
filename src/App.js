@@ -1,10 +1,11 @@
+import logo from './logo.svg';
 import './App.css';
-import Register from './components/register-component/Register';
+import Drawer from './Components/Drawer';
 
 function App() {
   return (
-    <div>
-      <Register />
+    <div className="App">
+      <Drawer />
     </div>
   );
 }
