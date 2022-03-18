@@ -1,0 +1,79 @@
+.formContainer{
+  padding: 50px;
+  margin: 100px 200px 0 300px;
+  background-color: palegoldenrod;
+}
+.formHeader{
+
+}
+
+
+.formField{
+  padding: 30px;
+  text-align: left;
+}
+
+.formLabel{
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+
+}
+
+.formIcon{
+  padding: 10px;
+  min-width: 50px;
+}
+
+.formProfile i {
+  font-size: 20px;
+  position: absolute;
+  color: palevioletred;
+}
+
+.formAddress i {
+  pading: 10px;
+  font-size: 20px;
+  position: absolute;
+  color: palevioletred;
+}
+
+.formEmail i {
+  font-size: 20px;
+  position: absolute;
+  color: palevioletred;
+}
+
+.formPhone i {
+  font-size: 20px;
+  position: absolute;
+  color: palevioletred;
+}
+
+.formInput{
+  width: 100%;
+  padding: 10px;
+  padding-left: 40px;
+  text-align: left;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.formButton{
+  padding: 10px 15px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: palevioletred;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin:5%;
+}
+
+.formButton:hover{
+  background-color: gray;
+  color: palegoldenrod;
+}
