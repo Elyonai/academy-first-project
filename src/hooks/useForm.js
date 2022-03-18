@@ -4,7 +4,7 @@ export const useForm = function (initialForm, successFunction, errorFunction) {
 
     // states
     const [form, setForm] = useState(initialForm);
-    const [invalidInputs, setInvalidInputs] = useState(initialForm);
+    const [inputs, setInputs] = useState(initialForm);
 
     // handleChange
     const handleChange = (e, expression) => {
@@ -16,11 +16,11 @@ export const useForm = function (initialForm, successFunction, errorFunction) {
                         [e.target.name]: e.target.value
                     });
 
-                setInvalidInputs({...invalidInputs,[e.target.name]: false});
+                setInputs({...inputs,[e.target.name]: true});
 
             } else {
-                setInvalidInputs({...invalidInputs, 
-                    [e.target.name]: true
+                setInputs({...inputs, 
+                    [e.target.name]: false
                 });
 
                 setForm({
@@ -29,22 +29,19 @@ export const useForm = function (initialForm, successFunction, errorFunction) {
                 });
             }
         } else if(e.target.checked) {
-            setForm({
-                ...form, 
-                [e.target.name]: e.target.value
-            });
-            
+
             setForm({
                 ...form, 
                 [e.target.name]: e.target.checked
             });
+
         } else {
             setForm({
                 ...form, 
                 [e.target.name]: e.target.value
             });
 
-            setInvalidInputs({...invalidInputs,[e.target.name]: e.target.value});
+            setInputs({...inputs,[e.target.name]: e.target.value});
         }
     };
 
@@ -53,7 +50,7 @@ export const useForm = function (initialForm, successFunction, errorFunction) {
 
         e.preventDefault();
 
-        const invalids = Object.values(invalidInputs).filter(el => el === true || el === '');
+        const invalids = Object.values(inputs).filter(el => el === false || el === '');
         
         if(invalids.length === 0) {
             successFunction(e);
@@ -67,10 +64,11 @@ export const useForm = function (initialForm, successFunction, errorFunction) {
     // handleReset
     const handleReset = (e) => {
         setForm(initialForm);
+        setInputs(initialForm);
         e.target.reset();
     }
 
     // return
-    return {form, handleChange, handleSubmit, handleReset, invalidInputs};
+    return {form, handleChange, handleSubmit, handleReset, inputs};
 
 }
